@@ -1,0 +1,22 @@
+webhooks:
+  - name: Render Deploy
+    type: PULL_REQUEST
+    command: 
+      - "bash"
+      - "-c"
+      - "npm install && npm start"
+
+builds:
+  - name: md-preview-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+
+services:
+  - name: md-preview-backend
+    type: web
+    buildCommand: npm install
+    startCommand: node index.js
+routes:
+  - path: /(.*) 
+    command: 'node index.js'
