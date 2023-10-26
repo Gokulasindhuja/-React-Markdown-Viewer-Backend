@@ -23,7 +23,7 @@ app.use('/players',playersRouter)
 app.use('/users',userRouter)
 
 app.get("/",function(req,res){
-    res.send("Hello world")
+    res.send("Hello Universe")
 })
 
 
