@@ -8,8 +8,12 @@ import userRouter from "./routes/user.route.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = "mongodb://localhost:27017/gokulasindhuja";
 const client = new MongoClient(MONGO_URL);
+await client.connect();
+console.log("MongoDb is connected..!");
+
+export { client };
 
 async function startServer() {
   try {
