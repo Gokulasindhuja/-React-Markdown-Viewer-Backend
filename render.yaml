@@ -1,9 +1,13 @@
 webhooks:
+  - name: Render Deploy
+    type: PULL_REQUEST
+    command: 
+      - "bash"
+      - "-c"
+      - "npm install && npm start"
+
+builds:
   - name: md-preview-backend
-    events:
-      - push
-    branch_filter: "*"
-    script: 
-      - echo "Deploying to Render..."
-      - npm install
-      - npm run build
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
