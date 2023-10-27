@@ -26,7 +26,7 @@ async function startServer() {
     app.use('/users', userRouter);
 
     app.get("/", function (req, res) {
-      res.send("Hello Universe");
+      res.send("Hello world");
     });
 
     app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
