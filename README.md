@@ -1,9 +1,5 @@
 # React-Markdown-Viewer-Backend
 
-# HI
-## HELLO
-*WELCOME*
-
 Backend GIT repo : https://github.com/Gokulasindhuja/React-Markdown-Viewer-Backend
 
 Backend Deploy : https://react-markdown-viewer-backend-69s0.onrender.com
